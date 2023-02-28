@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <form class="d-flex" role="search">
+    <input
+      class="form-control me-2"
+      type="search"
+      placeholder="Search Food from IcySpicy"
+      aria-label="Search"
+      [value]="searchItem"
+      [(ngModel)]="searchItem"
+      (change)="search()"
+    />
+    <button class="btn btn-outline-success" (click)="search()">Search</button>
+  </form>
+</div>

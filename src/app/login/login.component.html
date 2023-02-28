@@ -1,0 +1,66 @@
+<div class="bootstrap-wrapper">
+   
+  <div class="container">
+       
+    <div class="row mt20">
+           
+      <div class="col-md-6 offset-md-3">
+               
+        <mat-card
+          >          <mat-card-content> ... </mat-card-content>                 
+               
+          <form action="" class="form-control">
+                   
+            <h1 class="text-center">Login Here !</h1>
+            <!-- Username field -->         
+            <mat-form-field class="full-width" appearance="outline"
+              >            <mat-label>User Email</mat-label>           
+              <input
+                required
+                matInput
+                placeholder="Your Email id here!"
+                name="email"
+                [(ngModel)]="user.email"
+              />            <mat-hint>Valid Email</mat-hint>          </mat-form-field
+            >       
+            <!-- Password field -->       
+            <mat-form-field class="full-width" appearance="outline"
+              >          <mat-label>Password</mat-label>         
+              <input
+                type="password"
+                required
+                matInput
+                placeholder="Enter here"
+                name="password"
+                [(ngModel)]="user.password"
+              />        </mat-form-field
+            >       
+            <div class="container text-center">
+                       
+              <button
+                mat-raised-button
+                color="accent"
+                type="submit"
+                (click)="formSubmit()"
+              >
+                            Login         </button
+              >         
+              <button
+                mat-raised-button
+                color="warn"
+                type="reset"
+                class="ml30px"
+              >
+                            Reset         </button
+              >       
+            </div>
+                   
+          </form>
+                </mat-card
+        >          
+      </div>
+         
+    </div>
+     
+  </div>
+</div>

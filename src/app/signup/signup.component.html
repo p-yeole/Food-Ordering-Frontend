@@ -1,0 +1,89 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row" style="margin-top: 20px">
+      <div class="col-md-6 offset-md-3">
+        <!-- <div class="container text-center">
+          <img src="././assets/apple-logo-trans.jpg" alt="" />
+        </div> -->
+
+        <!-- {{ user | json }} -->
+
+        <!-- <form (ngSubmit)="formSubmit()"></form> -->
+
+        <form class="form-control">
+          <h1 class="text-center">Sign Up!</h1>
+          <!---Username field --->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Username</mat-label>
+            <input
+              [(ngModel)]="user.name"
+              name="name"
+              matInput
+              placeholder="Enter here"
+              required
+            />
+          </mat-form-field>
+          <br /><br />
+          <!---Password field-->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input
+              [(ngModel)]="user.password"
+              name="password"
+              type="password"
+              matInput
+              placeholder="Enter here"
+              required
+            />
+            <mat-hint>Password must be Unique !!</mat-hint>
+          </mat-form-field>
+          <br /><br />
+          <!--Email-->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input
+              [(ngModel)]="user.email"
+              name="email"
+              type="email"
+              matInput
+              placeholder="Enter here"
+              required
+            />
+          </mat-form-field>
+          <br /><br />
+          <!--Phone Number-->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Phone Number</mat-label>
+            <input
+              [(ngModel)]="user.contactNumber"
+              name="contactNumber"
+              type="number"
+              matInput
+              placeholder="Enter here"
+              required
+            />
+          </mat-form-field>
+          <br /><br />
+          <div class="container text-center">
+            <button
+              type="submit"
+              mat-raised-button
+              color="warn"
+              (click)="formSubmit()"
+            >
+              Register
+            </button>
+            <button
+              type="button"
+              style="margin-left: 20px"
+              mat-raised-button
+              color="Primary"
+            >
+              Clear
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

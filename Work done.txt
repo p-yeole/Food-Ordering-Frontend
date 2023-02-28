@@ -1,0 +1,19 @@
+Created Home component to display food items.
+    -/home.component.html displays food items from /src/app/services/food.service.ts
+    -Images and Products are fetched from the above food.service.ts service .
+    -& Images are stored in /src/assets folder.
+
+Created Header Component to manage Navbar.
+
+Created getAll() method in food service.
+
+Created Food
+Class for Holding Food Details - /src/app/shared/model/food.ts
+
+Adding food details to cards
+
+**
+Added search route in app.routing.ts
+Use activated route in HomeComponent constructor
+Used 2 way binding in search component
+using router for putting searchItem into URLs
