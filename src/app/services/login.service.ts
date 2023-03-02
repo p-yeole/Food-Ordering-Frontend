@@ -13,15 +13,15 @@ export class LoginService {
 
   // currentuser which is loggedin
 
-  public getCurrentUser() {
-    return this.http.get(`${baseUrl}/current-user`);
-  }
+  // public getCurrentUser() {
+  //   return this.http.get(`${baseUrl}/current-user`);
+  // }
 
-  //generate token..
+  // //generate token..
 
-  public generateToken(loginData: any) {
-    return this.http.post(`${baseUrl}/generate-token`, loginData);
-  }
+  // public generateToken(loginData: any) {
+  //   return this.http.post(`${baseUrl}/generate-token`, loginData);
+  // }
 
   //login user. set token in localstorage
   public loginUser(token: any) {

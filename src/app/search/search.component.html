@@ -1,8 +1,9 @@
 <div class="container-fluid">
-  <form class="d-flex" role="search">
+  <form class="d-flex" role="search" (ngSubmit)="search()">
     <input
       class="form-control me-2"
       type="search"
+      name="searchItem"
       placeholder="Search Food from IcySpicy"
       aria-label="Search"
       [value]="searchItem"

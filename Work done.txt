@@ -17,3 +17,20 @@ Added search route in app.routing.ts
 Use activated route in HomeComponent constructor
 Used 2 way binding in search component
 using router for putting searchItem into URLs
+
+
+Today's tasks:
+Cart component
+Individual food page component
+Add products api
+orders api
+Payments
+
+Pending tasks for project after interview:
+1. Make forget password form to use forget password API.
+2. Design checkout page form for taking below inputs.
+      take inputs at checkout - receiver's name, receiver's number and delivery address
+
+3. Use JSON server for storing cart items temporarily.
+4. create API to store these details in mysql database(orders table), once order is placed using checkout button
+5. stripe payments gateway implementation

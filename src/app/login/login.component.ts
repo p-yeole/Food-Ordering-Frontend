@@ -31,60 +31,16 @@ export class LoginComponent implements OnInit {
       (data: any) => {
         // success
         console.log(data);
-        // this.router.navigateByUrl('/' + this.user);
-        // this.router.navigate(['app-home']);
-        // alert("success")
-        // Swal.fire(
-        //   'Successfully done',
-        //   'user is registered with id ' + data.id,
-        //   'success'
-        // );
+        console.log(this.login.isLoggedin());
+        console.log(this.login.loginUser(data.token));
+        if (this.login.loginUser(data.token)) {
+          //this.login.isLoggedin()
+          window.location.href = '/';
+        }
       },
       (error) => {
         //error
         console.log(error);
-        // this.router.navigate(['app-home']);
-        // alert("something went wrong")
-        // this.snack.open('something went wrong !!', 'ok', {
-        //   duration: 3000,
-        // });
-      }
-    );
-    // request to server to generate token
-    this.login.generateToken(this.user).subscribe(
-      (data: any) => {
-        console.log('success');
-        console.log(data);
-
-        //login...
-        this.login.loginUser(data.token);
-
-        this.login.getCurrentUser().subscribe((user: any) => {
-          this.login.setUser(user);
-          console.log(user);
-
-          //redirect ... ADMIN : admin-dashboard
-          //redirect ... NORMAL : mormal-dashboard
-          // if (this.login.getUserRole() == 'ADMIN') {
-          window.location.href = '/';
-          //   this.router.navigate(['admin']);
-          //   this.login.loginStatusSubject.next(true);
-          // } else if (this.login.getUserRole() == 'NORMAL') {
-          //   // window.location.href = '/user-dashboard';
-          //   this.router.navigate(['user-dashboard/0']);
-          //   this.login.loginStatusSubject.next(true);
-          // } else {
-          //   this.login.logout();
-          // }
-          // if(this.login.)
-        });
-      },
-      (error) => {
-        console.log('Error');
-        console.log(error);
-        // this.snack.open('Invalid Details !!', 'try again', {
-        //   duration: 3000,
-        // });
       }
     );
   }
