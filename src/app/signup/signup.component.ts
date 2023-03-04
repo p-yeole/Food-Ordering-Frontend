@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { UserService } from '../services/user-service.service';
 
 @Component({
@@ -29,10 +30,16 @@ export class SignupComponent implements OnInit {
     }
 
     this.service.addUser(this.user).subscribe(
+      // if(this.user.name=='' || this.user.password==null || this.user.email==''|| this.user.contactNumber==''){
+      //   alert("Please enter all credentials!!");
+      //   return;
+      // }
+
       (data: any) => {
         // success
         console.log(data);
-        // alert("success")
+        alert('Succefully Registered! Please Login.');
+
         // Swal.fire(
         //   'Successfully done',
         //   'user is registered with id ' + data.id,
@@ -42,13 +49,8 @@ export class SignupComponent implements OnInit {
       (error) => {
         //error
         console.log(error);
-        // alert("something went wrong")
-        // this.snack.open('something went wrong !!', 'ok', {
-        //   duration: 3000,
-        // });
+        alert('something went wrong');
       }
     );
   }
-
-  //this.User
 }

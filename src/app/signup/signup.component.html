@@ -1,4 +1,4 @@
-<div class="bootstrap-wrapper">
+<!-- <div class="bootstrap-wrapper">
   <div class="container">
     <div class="row" style="margin-top: 20px">
       <div class="col-md-6 offset-md-3">
@@ -6,13 +6,13 @@
           <img src="././assets/apple-logo-trans.jpg" alt="" />
         </div> -->
 
-        <!-- {{ user | json }} -->
+<!-- {{ user | json }} -->
 
-        <!-- <form (ngSubmit)="formSubmit()"></form> -->
+<!-- <form (ngSubmit)="formSubmit()"></form>
 
         <form class="form-control">
           <h1 class="text-center">Sign Up!</h1>
-          <!---Username field --->
+          <!---Username field
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Username</mat-label>
             <input
@@ -24,7 +24,7 @@
             />
           </mat-form-field>
           <br /><br />
-          <!---Password field-->
+          <!---Password field
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Password</mat-label>
             <input
@@ -38,7 +38,7 @@
             <mat-hint>Password must be Unique !!</mat-hint>
           </mat-form-field>
           <br /><br />
-          <!--Email-->
+          <!--Email
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Email</mat-label>
             <input
@@ -51,7 +51,7 @@
             />
           </mat-form-field>
           <br /><br />
-          <!--Phone Number-->
+          <!--Phone Number
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Phone Number</mat-label>
             <input
@@ -85,5 +85,89 @@
         </form>
       </div>
     </div>
+  </div>
+</div> -->
+
+<!-- Signup new form -->
+<div class="box-form">
+  <div class="left">
+    <div class="overlay">
+      <!-- <h1>Hello World.</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Curabitur et est sed felis aliquet sollicitudin</p>
+		<span>
+			<p>login with social media</p>
+			<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Login with Twitter</a>
+		</span> -->
+      <img class="bgimg" src="./assets/taxi-fast-pizza-delivery.png" alt="" />
+    </div>
+  </div>
+
+  <div class="right">
+    <!-- <h5>Login</h5> -->
+    <p>
+      Already have an account? Click <a href="#" routerLink="/login">here</a> to
+      Login into your account
+    </p>
+    <div class="inputs">
+      <input
+        [(ngModel)]="user.name"
+        name="name"
+        placeholder="Your Name"
+        required
+      />
+      <br />
+      <input
+        [(ngModel)]="user.password"
+        name="password"
+        type="password"
+        matInput
+        placeholder="Password"
+        required
+      />
+      <br />
+      <input
+        [(ngModel)]="user.email"
+        name="email"
+        type="email"
+        matInput
+        placeholder="Email"
+        required
+      />
+      <br />
+      <input
+        [(ngModel)]="user.contactNumber"
+        name="contactNumber"
+        type="number"
+        matInput
+        placeholder="Mobile Number"
+        required
+      />
+    </div>
+
+    <br /><br />
+
+    <div class="remember-me--forget-password">
+      <!-- Angular -->
+      <!-- <label>
+		<input type="checkbox" name="item" checked/>
+		<span class="text-checkbox">Remember me</span>
+	</label> -->
+      <p>forget password?</p>
+    </div>
+
+    <br />
+    <button
+      type="submit"
+      mat-raised-button
+      color="warn"
+      class="text-center"
+      routerLink="/login"
+      id="loginButton"
+      (click)="formSubmit()"
+    >
+      Register
+    </button>
   </div>
 </div>

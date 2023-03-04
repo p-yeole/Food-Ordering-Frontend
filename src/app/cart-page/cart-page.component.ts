@@ -37,4 +37,11 @@ export class CartPageComponent implements OnInit {
   setCart() {
     this.cart = this.cartService.getCart();
   }
+
+  onSubmit() {
+    window.alert(
+      'Thanks for placing the order. Your Order will be delivered shortly. Please pay in cash!!'
+    );
+    //write code to empty cart items on click of this button
+  }
 }

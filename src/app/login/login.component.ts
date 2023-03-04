@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HeaderComponent } from '../header/header.component';
 import { LoginService } from '../services/login.service';
 import { UserService } from '../services/user-service.service';
 
@@ -21,12 +22,14 @@ export class LoginComponent implements OnInit {
   };
 
   ngOnInit(): void {}
+
   formSubmit(): void {
-    console.log('OK');
-    // if (this.user.email == '' || this.user.password == null) {
-    //   alert('User is required !!');
-    //   return;
-    // }
+    //console.log('OK');
+
+    if (this.user.email == '' || this.user.password == null) {
+      alert('User is required !!');
+      return;
+    }
     this.service.login(this.user).subscribe(
       (data: any) => {
         // success
@@ -36,11 +39,13 @@ export class LoginComponent implements OnInit {
         if (this.login.loginUser(data.token)) {
           //this.login.isLoggedin()
           window.location.href = '/';
+          alert('Successfully logged in');
         }
       },
       (error) => {
         //error
-        console.log(error);
+        alert('Wrong Credentials! Please try again.');
+        // console.log(error);
       }
     );
   }
