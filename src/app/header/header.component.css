@@ -18,7 +18,9 @@ a.logo {
   font-weight: bold;
   padding: 1em;
 }
-
+.headers_main {
+  margin-left: 15px;
+}
 nav ul {
   list-style-type: none;
   margin: 0;

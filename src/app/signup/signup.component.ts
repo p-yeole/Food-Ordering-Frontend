@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { UserService } from '../services/user-service.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { UserService } from '../services/user-service.service';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
-  constructor(private service: UserService) {}
+  constructor(private service: UserService, private router: Router) {}
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
@@ -39,6 +39,7 @@ export class SignupComponent implements OnInit {
         // success
         console.log(data);
         alert('Succefully Registered! Please Login.');
+        this.router.navigateByUrl('/login');
 
         // Swal.fire(
         //   'Successfully done',

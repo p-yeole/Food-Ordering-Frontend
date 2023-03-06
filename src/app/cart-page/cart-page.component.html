@@ -1,63 +1,71 @@
+<h4 class="text-center" style="padding-top: 3%">MyCart</h4>
+<app-not-found
+  [visible]="!cart || cart.items.length > 0"
+  notFoundMessage=""
+  resetLinkText="Add more"
+></app-not-found>
 <app-not-found
   [visible]="!cart || cart.items.length <= 0"
   notFoundMessage="Cart Page Is Empty!"
   resetLinkText="Go To Homepage"
 >
 </app-not-found>
-<div class="container">
-  <div *ngIf="cart && cart.items.length > 0" class="container text-center">
-    <ul>
-      <li *ngFor="let cartItem of cart.items">
-        <div>
-          <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name" />
-        </div>
-        <div>
-          <a routerLink="/food/{{ cartItem.food.id }}">
-            {{ cartItem.food.name }}
-          </a>
-        </div>
 
-        <div>
-          <select
-            #quantitySelect
-            (change)="changeQuantity(cartItem, quantitySelect.value)"
-          >
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
+<br /><br />
 
-        <div>₹{{ cartItem.price }}</div>
+<div class="box-form">
+  <div *ngIf="cart && cart.items.length > 0" class="container">
+    <div>
+      <ul>
+        <li *ngFor="let cartItem of cart.items">
+          <div>
+            <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name" />
+          </div>
+          <div>
+            <a routerLink="/food/{{ cartItem.food.id }}">
+              {{ cartItem.food.name }}
+            </a>
+          </div>
 
-        <div>
-          <button
-            class="remove-button btn-warning"
-            (click)="removeFromCart(cartItem)"
-          >
-            Remove
-          </button>
-        </div>
-      </li>
-    </ul>
+          <div>
+            <select
+              #quantitySelect
+              (change)="changeQuantity(cartItem, quantitySelect.value)"
+            >
+              <!-- [(ngModel)
+            ]="value" -->
+              <option value="1" id="1">1</option>
+              <option value="2" id="2">2</option>
+              <option value="3" id="3">3</option>
+              <option value="4" id="4">4</option>
+              <option value="5" id="5">5</option>
+            </select>
+          </div>
 
+          <div>₹{{ cartItem.price }}</div>
+
+          <div>
+            <button
+              class="remove-button btn-warning"
+              (click)="removeFromCart(cartItem)"
+            >
+              Remove
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
     <div class="checkout">
-      <div>
-        <h4 class="text-center">Checkout</h4>
-        <div class="foods-count">{{ cart.items.length }}</div>
-        <div class="total-price">₹{{ cart.totalPrice }}</div>
+      <h4 class="text-center">Checkout</h4>
+      <div class="foods-count">
+        <b>{{ cart.totalQuantity }}</b>
+      </div>
+      <div class="total-price">
+        <b>₹{{ cart.totalPrice }}</b>
+      </div>
 
-        <!-- <div>
-          <input type="text" class="address" placeholder="Delivery address " />
-        </div> -->
-
-        <div class="placeorder">
-          <button class="btn btn-success" routerLink="/" (click)="onSubmit()">
-            Confirm Order
-          </button>
-        </div>
+      <div class="placeorder">
+        <button class="btn btn-success" routerLink="/checkout">Checkout</button>
       </div>
     </div>
   </div>

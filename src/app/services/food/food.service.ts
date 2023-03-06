@@ -57,7 +57,7 @@ export class FoodService {
         name: 'Mac n Cheese',
         cookTime: '10-15mins',
         price: 190, //rupees
-        favourite: true,
+        // favourite: true,
         origins: ['Italy'],
         star: 4.5,
         imageUrl: './assets/burger extreme.jpg',
@@ -69,7 +69,7 @@ export class FoodService {
         name: 'Veg Burger Combo',
         cookTime: '10-15mins',
         price: 250, //dollars
-        favourite: false,
+        // favourite: false,
         origins: ['Italy'],
         star: 3.8,
         imageUrl: '/assets/burger2.jpg',
@@ -80,7 +80,7 @@ export class FoodService {
         name: 'Chicken Tikka',
         cookTime: '10-15mins',
         price: 320, //dollars
-        favourite: false,
+        // favourite: false,
         origins: ['Indian'],
         star: 3,
         imageUrl: '/assets/chicken tikka.jpg',
@@ -92,7 +92,7 @@ export class FoodService {
         name: 'Chicken Loaded Pizza',
         cookTime: '10-15mins',
         price: 300, //dollars
-        favourite: false,
+        // favourite: false,
         origins: ['India'],
         star: 4,
         imageUrl: '/assets/non veg pizza.jpg',
@@ -103,7 +103,7 @@ export class FoodService {
         name: 'American Cheese Supreme',
         cookTime: '10-15mins',
         price: 170, //dollars
-        favourite: false,
+        // favourite: false,
         origins: ['America'],
         star: 3.5,
         imageUrl: '/assets/burger.jpg',
@@ -114,7 +114,7 @@ export class FoodService {
         name: 'Paneer Tikka',
         cookTime: '10-15mins',
         price: 160, //dollars
-        favourite: true,
+        // favourite: true,
         origins: ['Italy'],
         star: 4.8,
         imageUrl: '/assets/paneer tikka.jpg',
@@ -125,7 +125,7 @@ export class FoodService {
         name: 'Starter Combo',
         cookTime: '10-15mins',
         price: 200, //dollars
-        favourite: false,
+        // favourite: false,
         origins: ['Italy'],
         star: 2.9,
         imageUrl: '/assets/starters1.jpg',
@@ -136,7 +136,7 @@ export class FoodService {
         name: 'Pink Sauce pasta',
         cookTime: '10-15mins',
         price: 180, //dollars
-        favourite: false,
+        // favourite: false,
         origins: ['Italy'],
         star: 4.5,
         imageUrl: '/assets/veg pasta.jpg',
@@ -147,7 +147,7 @@ export class FoodService {
         name: '7 Cheese Pizza',
         cookTime: '10-15mins',
         price: 250, //dollars
-        favourite: false,
+        // favourite: false,
         origins: ['Italy'],
         star: 4.5,
         imageUrl: '/assets/veg pizza.jpg',

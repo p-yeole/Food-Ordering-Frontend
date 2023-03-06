@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSubmit()" class="form-control">
+<!-- <form (ngSubmit)="onSubmit()" class="form-control">
   <label>Name:</label>
   <input type="text" [(ngModel)]="user.name" name="name" />
 
@@ -9,4 +9,62 @@
   <input type="text" [(ngModel)]="user.address" name="address" />
 
   <button type="submit">Submit</button>
-</form>
+</form> -->
+
+<!-- -------------------------------------------- -->
+<div class="box-form">
+  <div class="right">
+    <!-- <h6 class="text-center">Total Items:</h6>
+    <h6 class="text-center">Billing Amount:</h6> -->
+    <div></div>
+    <div class="inputs">
+      <h1>CHECKOUT</h1>
+      <!-- <br />
+      <label>Total Items: </label><span>{{ cart.totalQuantity }}</span>
+      <br />
+      <label>Billing Amout: </label><span>{{ cart.totalPrice }}</span>
+      <br /> -->
+      <input
+        type="text"
+        placeholder="Receiver's Name"
+        name="Recipient"
+        required
+      />
+      <!-- [(ngModel)]="user.name" -->
+      <br />
+      <!-- <div class="inputs"> -->
+      <input
+        type="text"
+        placeholder="Receiver's Contact"
+        name="mobile"
+        required
+      />
+      <!-- [(ngModel)]="user.contactNumber" -->
+      <br />
+      <input
+        type="text"
+        placeholder="Receiver's Address"
+        name="address"
+        required
+      />
+      <!-- [(ngModel)]="user.address" -->
+      <br /><br />
+      <button
+        (click)="formSubmit()"
+        type="submit"
+        class="btn btn-success text-center"
+      >
+        Place Order
+      </button>
+    </div>
+
+    <!-- <div class="remember-me--forget-password">
+         Angular
+        <label>
+        <input type="checkbox" name="item" checked />
+        <span class="text-checkbox">Remember me</span>
+      </label>
+      </div> -->
+  </div>
+</div>
+<!-- </div> -->

@@ -1,0 +1,92 @@
+.box-form {
+  float: center;
+  margin: 0 auto;
+  width: 60%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  /* display: flex;
+  flex: 1 1 100%; */
+  align-items: center;
+  /* justify-content: space-between; */
+  box-shadow: 0 0 20px 6px #090b6f85;
+  margin-top: 100px;
+}
+/* @media (max-width: 980px) {
+  .box-form {
+    flex-flow: wrap;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+} */
+.right {
+  align-items: center;
+}
+
+.box-form .right {
+  padding: 3%;
+  overflow: hidden;
+}
+.box-form .right input {
+  width: 100%;
+  max-width: max-content;
+  padding: 10px;
+  margin-top: 3%;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #b0b3b9;
+}
+
+.box-form .right button {
+  float: center;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 36px;
+  margin-top: 3%;
+  border-radius: 50px;
+  box-shadow: 0px 4px 20px 0px #ff4e18e9;
+  background-image: linear-gradient(135deg, #ff4e18e9 100%, #ff4e18e9 100%);
+}
+/* .placeOrder {
+  align-items: center;
+} */
+
+/*
+label::before {
+  content: " \f00c";
+  position: absolute;
+  font-family: FontAwesome;
+  background: transparent;
+  border: 3px solid #ff4e18e9;
+  border-radius: 4px;
+  color: transparent;
+  left: -30px;
+  transition: all 0.2s linear;
+}
+
+label:hover::before {
+  font-family: FontAwesome;
+  content: " \f00c";
+  color: #fff;
+  cursor: pointer;
+  background: #ff4e18e9;
+}
+
+label:hover::before .text-checkbox {
+  background: #ff4e18e9;
+}
+
+label span.text-checkbox {
+  display: inline-block;
+  height: auto;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+label input[type="checkbox"] {
+  display: none;
+} */

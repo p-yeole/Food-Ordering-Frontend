@@ -26,7 +26,8 @@ export class FoodPageComponent implements OnInit {
 
   addToCart() {
     this.cartService.addToCart(this.food);
-
-    this.router.navigateByUrl('/cart-page');
+    this.cartService.changeQuantity;
+    alert('Product added to Cart');
+    this.router.navigateByUrl('/');
   }
 }

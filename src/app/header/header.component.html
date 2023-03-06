@@ -5,14 +5,19 @@
       <b>ICYSPICY</b>
     </a>
 
-    <nav>
+    <nav class="headers_main">
       <ul>
         <li>
-          <a routerLink="/login" class="nav-item" id="log">Login</a>
+          <a routerLink="/login" class="nav-item" id="log" *ngIf="!isLoggedIn"
+            >Login</a
+          >
+          <a routerLink="/login" class="nav-item" id="log" *ngIf="isLoggedIn"
+            >Logout</a
+          >
           |
           <!-- <a routerLink="/signup" class="nav-item" id="sign">Register</a> -->
           <!-- | -->
-          <a href="#" routerLink="/cart-page" class="nav-item">MyCart</a>
+          <a href="#" routerLink="/cart-page" class="nav-item"> MyCart </a>
         </li>
       </ul>
     </nav>

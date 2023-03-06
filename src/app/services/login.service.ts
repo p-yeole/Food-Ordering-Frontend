@@ -11,17 +11,6 @@ export class LoginService {
 
   constructor(private http: HttpClient) {}
 
-  // currentuser which is loggedin
-
-  // public getCurrentUser() {
-  //   return this.http.get(`${baseUrl}/current-user`);
-  // }
-
-  // //generate token..
-
-  // public generateToken(loginData: any) {
-  //   return this.http.post(`${baseUrl}/generate-token`, loginData);
-  // }
 
   //login user. set token in localstorage
   public loginUser(token: any) {
